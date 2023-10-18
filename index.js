@@ -7,6 +7,7 @@
 
 function getTotalPrice(object) {
   // Aquí tu código
+  return Object.values(object).reduce((acumulador, values) => acumulador + values, 0);
 }
 
 // =============================================================================
@@ -17,6 +18,7 @@ function getTotalPrice(object) {
 
 function getAverageAge(object) {
   // Aquí tu código
+  return Object.values(object).reduce((acumulador, values) => acumulador + values, 0) / Object.values(object).length;
 }
 
 // =============================================================================
