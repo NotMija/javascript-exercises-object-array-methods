@@ -29,7 +29,8 @@ function getAverageAge(object) {
 // =============================================================================
 
 function getPeopleArray(object) {
-  // Aquí tu código
+  // Aquí tu códigos
+  return Object.keys(object).map(key => ({ name: key, age: object[key] }));
 }
 
 // =============================================================================
@@ -42,6 +43,7 @@ function getPeopleArray(object) {
 
 function getAbundantFruits(object) {
   // Aquí tu código
+  return Object.entries(object).filter(([fruit, quantity]) => quantity > 10).map(([fruit, quantity]) => ({ fruit, quantity }));
 }
 
 // =============================================================================
