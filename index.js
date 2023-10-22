@@ -55,4 +55,9 @@ function getAbundantFruits(object) {
 
 function getCharacterCount(object) {
   // Aquí tu código
+  return Object.keys(object).reduce((count, key) => {
+    const value = object[key];
+    return count + key.length + (typeof value === 'string' ? value.length : 0) + (typeof value === 'object' ? getCharacterCount(value) : 0);
+  }, 0);
 }
+
